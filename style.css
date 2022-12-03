@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151320;
+}
+
+.card1 {
+    cursor: pointer;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card1:before {
+    content: "";
+    background-image: conic-gradient(rgb(0, 255, 208),
+            transparent 120deg);
+
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+
+}
+
+.card1:after {
+    content: "Hey Hover me";
+    letter-spacing: 2px;
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    background-color: #1c1b29;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: rgb(1, 245, 212);
+    display: grid;
+    place-items: center;
+
+
+
+}
+
+:hover:before {
+    animation: rotate 5s infinite linear;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 10%;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card:before {
+    content: "";
+    background-image: conic-gradient(rgb(0, 255, 208),
+            transparent 120deg);
+
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    animation: rotate 5s infinite linear;
+}
+
+.card:after {
+    content: "Assalamualaikum";
+    letter-spacing: 2px;
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    background-color: #1c1b29;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: rgb(1, 245, 212);
+    display: grid;
+    place-items: center;
+
+
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
